@@ -27,11 +27,19 @@ img {
 }
 
 .search-box {
-  -webkit-appearance: none;
   /* border: none;
   outline: none; */
+  border-radius: 5px;
   padding: 10px;
-  width: 150px;
+  width: 25%;
   line-height: 30px;
-  margin-bottom: 30px;
+  margin: 100px 0 100px 100px;
+}
+
+.header {
+  margin-left: 100px;
+}
+
+.filters{
+  display: flex;
 }

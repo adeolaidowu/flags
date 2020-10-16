@@ -1,7 +1,10 @@
 import React, {useState, useEffect } from 'react';
-import CountryList from './components/CountryList'
+import CountryList from './components/CountryList';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './App.css';
 import SearchBox from './components/SearchBox';
+import Header from './components/Header';
+import FilterBox from './components/FilterBox';
 
 function App() {
   const [countries, setCountries] = useState([]);
@@ -31,9 +34,14 @@ function App() {
   return (
     <React.Fragment>
       {/* <SearchBox handleChange={handleSearchChange} /> */}
-      <input type="text" onChange={handleChange} className="search-box" />
+      {/* <FontAwesomeIcon icon="coffee" style={{fontSize: '150px'}}/> */}
+      <Header />
+      <div className="filters">
+        <input type="text" onChange={handleChange} className="search-box" placeholder="Search for a country" />
+        <FilterBox />
+      </div>
       {countries.length === 0 && <h1>Loading...</h1> }
-      <CountryList countries={filteredCountries} />
+      {filteredCountries.length > 0 ? <CountryList countries={filteredCountries} />: <h4>No such Country</h4> }
     </React.Fragment>
   );
 }
