@@ -6,9 +6,9 @@ function Country({country}) {
             <img src={country.flag} alt="country-flag" className="img" />
             <div className="container">
                 <h5>{country.name}</h5>
-                <p>{country.population}</p>
-                <p>{country.region}</p>
-                <p>{country.capital}</p>
+                <p>Population: {country.population}</p>
+                <p>Region: {country.region}</p>
+                <p>Capital: {country.capital}</p>
             </div>
         </div>
     )

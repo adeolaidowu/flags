@@ -1,13 +1,11 @@
 import React from 'react'
 
-function SearchBox({handleChange}) {
-    // const handleChange = e => {
-    //     handleSearchChange(e.target.value);
-    // }
+function SearchBox({handleSearchChange}) {
+    const handleChange = e => {
+        handleSearchChange(e.target.value);
+    }
     return (
-        <div>
-            <input type="text" onChange={handleChange} />
-        </div>
+            <input type="text" onChange={handleChange} className="search-box" placeholder="Search for a country" />
     )
 }
 
